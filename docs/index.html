@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistara</title>
+    <link href="./output.css" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+</head>
+<body class="scroll-smooth">
+    <div class="popup w-1/2 h-1/2 bg-slate-400 absolute z-10 hidden">
+        <div class="w-full h-full p-8">
+            <div class="grid grid-cols-3 gap-4 h-full">
+                <div class="slide-card bg-white rounded-lg shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-100 cursor-pointer transition-colors" data-slide="0">
+                    Slide 1
+                </div>
+                <div class="slide-card bg-white rounded-lg shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-100 cursor-pointer transition-colors" data-slide="1">
+                    Slide 2
+                </div>
+                <div class="slide-card bg-white rounded-lg shadow-lg flex items-center justify-center text-2xl font-bold hover:bg-gray-100 cursor-pointer transition-colors" data-slide="2">
+                    Slide 3
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="w-[calc(100%-80px)] h-[calc(100%-80px)]">
+        <div class="top-bar w-full h-[10%]  relative flex justify-between items-center">
+            <div class="flex space-x-5 items-center">
+                <div class="logo text-2xl font-bold">VISTARA</div>
+                <div class="menu hover:cursor-pointer">Menu</div>
+            <div class="custom-swiper-pagination"></div>
+            <div class="whitespace-nowrap slide-text"></div>
+        </div>
+            <div class="flex space-x-10 ">
+                <div class="custom-swiper-button-prev">Prev</div>
+                <div class="custom-swiper-button-next">Next</div>
+            </div>
+           
+        </div>
+        <div class="swiper bg-gray-200 w-full h-[90%] overflow-hidden rounded-lg">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="flex flex-col space-y-10 w-full h-full bg-gray-200 rounded-lg p-10 overflow-y-scroll scrollbar-hidden">
+                    <div class="flex space-x-10">
+                        <div class="w-1/2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur non cum sit recusandae doloribus aliquid hic, nemo cupiditate, consequatur consectetur expedita incidunt rem, dicta in accusantium ullam ut dolores. Vel?
+                        Quis, doloribus temporibus illum nihil magni voluptatum, deleniti cumque suscipit labore exercitationem incidunt voluptatibus porro odio fugiat est pariatur voluptates delectus veniam eveniet ratione maiores quae? Rerum vel hic explicabo.
+                        Deleniti nihil molestiae laudantium quas sint, optio vel soluta alias consequatur! Consequuntur repudiandae ad, distinctio explicabo autem doloremque? Esse doloremque a labore debitis molestiae nulla rerum modi ex accusamus repellendus.
+                        Dolorem, a eos? Doloribus sit quisquam reiciendis facere consequuntur incidunt, eaque eius fugiat blanditiis, aspernatur illo tempora. Corrupti similique explicabo eius tempore earum magnam a hic, quae non, recusandae doloribus.
+                        Sapiente quod nesciunt corrupti doloremque ex nam culpa omnis quisquam ratione recusandae, inventore necessitatibus reiciendis itaque qui? Vitae deleniti, numquam corporis vero error perspiciatis ad incidunt voluptatum aut, ea minima.
+                        Tempora deleniti, placeat quidem facilis iste fugiat fugit quod cumque corrupti voluptate voluptas officiis error velit doloribus itaque ab modi saepe cum optio quibusdam nostrum soluta. </div>
+                        <div class="w-1/2 min-h-full bg-gray-400 rounded-lg shadow-xl"></div>
+                    </div>
+                    <div class="flex space-x-10">
+                        <div class="w-1/2 min-h-full bg-gray-400 rounded-lg shadow-xl"></div>
+                        <div class="w-1/2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur non cum sit recusandae doloribus aliquid hic, nemo cupiditate, consequatur consectetur expedita incidunt rem, dicta in accusantium ullam ut dolores. Vel?
+                        Quis, doloribus temporibus illum nihil magni voluptatum, deleniti cumque suscipit labore exercitationem incidunt voluptatibus porro odio fugiat est pariatur voluptates delectus veniam eveniet ratione maiores quae? Rerum vel hic explicabo.
+                        Deleniti nihil molestiae laudantium quas sint, optio vel soluta alias consequatur! Consequuntur repudiandae ad, distinctio explicabo autem doloremque? Esse doloremque a labore debitis molestiae nulla rerum modi ex accusamus repellendus.
+                        Dolorem, a eos? Doloribus sit quisquam reiciendis facere consequuntur incidunt, eaque eius fugiat blanditiis, aspernatur illo tempora. Corrupti similique explicabo eius tempore earum magnam a hic, quae non, recusandae doloribus.
+                        Sapiente quod nesciunt corrupti doloremque ex nam culpa omnis quisquam ratione recusandae, inventore necessitatibus reiciendis itaque qui? Vitae deleniti, numquam corporis vero error perspiciatis ad incidunt voluptatum aut, ea minima.
+                        Tempora deleniti, placeat quidem facilis iste fugiat fugit quod cumque corrupti voluptate voluptas officiis error velit doloribus itaque ab modi saepe cum optio quibusdam nostrum soluta. </div>
+                    </div>
+              </div>
+              </div>
+              <div class="swiper-slide"><div class="flex items-center justify-center w-full h-full p-10 text-4xl">Slide 2</div></div>
+              <div class="swiper-slide"><div class="flex items-center justify-center w-full h-full p-10 text-4xl">Slide 3</div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const menu = document.querySelector('.menu');
+        const popup = document.querySelector('.popup');
+        const slideCards = document.querySelectorAll('.slide-card');
+
+        menu.addEventListener('click', () => {
+            popup.classList.toggle('hidden');
+        });
+
+        // Add click event listeners to slide cards
+        slideCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const slideIndex = parseInt(card.dataset.slide);
+                // Using slideToLoop instead of slideTo for proper loop navigation
+                swiper.slideToLoop(slideIndex);
+                popup.classList.add('hidden');
+            });
+        });
+
+        const slideTexts = ['Slide 1', 'Slide 2', 'Slide 3'];
+        
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            allowTouchMove: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.custom-swiper-pagination',
+                type: 'fraction',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.custom-swiper-button-next',
+                prevEl: '.custom-swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+
+            on: {
+                init: function () {
+                    updateSlideText(this.realIndex);
+                },
+                slideChange: function () {
+                    updateSlideText(this.realIndex);
+                },
+            },
+        });
+
+        function updateSlideText(index) {
+            const slideText = document.querySelector('.slide-text');
+            slideText.textContent = slideTexts[index];
+        }
+    </script>
+</body>
+</html>
